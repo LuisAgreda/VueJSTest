@@ -1,4 +1,4 @@
-# LahHausTest
+# LaHausTest
 
 ## Project setup
 ```
