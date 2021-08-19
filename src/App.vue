@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="m-0">
+  <div id="app">
     <px-header />
   </div>
 </template>
@@ -15,17 +15,13 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'silkaregular';
-  src: local('Merienda'),
+  font-family: 'silka';
+  src: local('silka'),
     url(./fonts/silka/silka-regular-webfont.ttf) format('truetype');
 }
 
 #app {
-  font-family: silkaregular, Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-family: silka, Avenir, Helvetica, Arial, sans-serif;
   color: #012d26;
-  margin-top: 60px;
 }
 </style>
