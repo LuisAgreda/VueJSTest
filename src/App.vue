@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="m-0">
+    <px-header />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PxHeader from '@/components/PxHeader'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { PxHeader },
 }
 </script>
 
 <style>
+@font-face {
+  font-family: 'silkaregular';
+  src: local('Merienda'),
+    url(./fonts/silka/silka-regular-webfont.ttf) format('truetype');
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: silkaregular, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #012d26;
   margin-top: 60px;
 }
 </style>
