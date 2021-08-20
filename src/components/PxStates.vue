@@ -1,15 +1,29 @@
 <template>
   <section class="mx-6 grid gap-y-16">
     <div v-for="objData in states" :key="objData.id">
-      <div class="w-full h-48 flex">
+      <div class="relative w-full h-48 flex overflow-hidden">
+        <div>
+          <img
+            class="
+              h-full
+              object-cover
+              border-solid border border-black
+              rounded-lg
+              z-20
+            "
+            v-for="images in searchingImage(
+              objData.attributes.real_estate_ids,
+              included,
+            )"
+            :key="images"
+            :src="images"
+            :alt="images"
+          />
+        </div>
         <img
-          v-for="images in searchingImage(
-            objData.attributes.real_estate_ids,
-            included,
-          )"
-          :key="images"
-          :src="images"
-          :alt="images"
+          class="absolute w-full h-full left-0 top-0 z-0"
+          src="@/assets/static/images/empty-state.png"
+          alt="empty state image"
         />
       </div>
       <span class="mt-5 block text-lg font-semibold">{{
