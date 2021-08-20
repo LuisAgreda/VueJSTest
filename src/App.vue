@@ -1,15 +1,17 @@
 <template>
   <div id="app">
     <px-header />
+    <home />
   </div>
 </template>
 
 <script>
 import PxHeader from '@/components/PxHeader'
+import Home from '@/views/Home'
 
 export default {
   name: 'App',
-  components: { PxHeader },
+  components: { PxHeader, Home },
 }
 </script>
 
@@ -17,7 +19,7 @@ export default {
 @font-face {
   font-family: 'silka';
   src: local('silka'),
-    url(./fonts/silka/silka-regular-webfont.ttf) format('truetype');
+    url(./fonts/silka/silka-regular-webfont.woff2) format('woff2');
 }
 
 #app {
