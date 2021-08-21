@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-6 grid gap-y-16">
+  <section class="mx-6 grid gap-y-16 lg:w-8/12 lg:m-auto">
     <div v-for="objData in states" :key="objData.id">
       <div class="relative w-72 h-48">
         <div class="flex rounded-lg h-full cursor-pointer">

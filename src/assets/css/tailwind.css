@@ -4,11 +4,11 @@
 
 @layer utilities {
   .brightness-60 {
-    filter: brightness(60%)
+    filter: brightness(40%)
   }
 
   .brightness-80 {
-    filter: brightness(80%)
+    filter: brightness(60%)
   }
 
   .w-36 {
@@ -17,6 +17,10 @@
 
   .wd-48 {
     width: 210px;
+  }
+
+  .w-100 {
+    width: 59rem;
   }
 
   .p-0-2 {
