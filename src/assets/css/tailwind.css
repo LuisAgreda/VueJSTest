@@ -2,32 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .brightness-60 {
-    filter: brightness(60%)
-  }
+.bg-lh {
+  background-color: rgba(1, 45, 38, 0.7);
+}
 
-  .brightness-80 {
-    filter: brightness(80%)
-  }
+.right-10d {
+  right: 10%;
+}
 
-  .w-36 {
-    width: 9rem;
-  }
+.w-3\/6 {
+  width: 50% !important;
+}
 
-  .wd-48 {
-    width: 210px;
-  }
-
-  .p-0-2 {
-    padding: 2px;
-    box-sizing: border-box;
-    background:  #fff;
-  }
-
-  .t-r-2 {
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%)
-  }
+.w-3\/4 {
+  width: 75% !important;
 }

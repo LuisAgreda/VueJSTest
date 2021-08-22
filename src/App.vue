@@ -19,7 +19,7 @@ export default {
 @font-face {
   font-family: 'silka';
   src: local('silka'),
-    url(./fonts/silka/silka-regular-webfont.woff2) format('woff2');
+    url(/fonts/silka/silka-regular-webfont.woff2) format('woff2');
 }
 
 #app {

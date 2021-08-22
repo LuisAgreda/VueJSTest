@@ -1,42 +1,73 @@
 <template>
-  <section class="mx-6 grid gap-y-16">
+  <section
+    class="
+      max-w-4xl
+      px-6
+      lg:m-auto
+      grid
+      gap-y-14
+      md:grid-cols-2
+      md:gap-x-8
+      lg:grid-cols-3
+      overflow-hidden
+    "
+  >
     <div v-for="objData in states" :key="objData.id">
-      <div class="relative w-72 h-48">
-        <div class="flex rounded-lg h-full cursor-pointer">
-          <img
-            v-bind:class="{
-              'w-36':
-                images.id == objData.attributes.real_estate_ids[0] &&
-                objData.attributes.real_estate_ids.length > 1,
-              'z-30': images.id == objData.attributes.real_estate_ids[0],
+      <div class="relative w-full h-48">
+        <div
+          v-for="images in searchingImage(
+            objData.attributes.real_estate_ids,
+            included,
+          )"
+          :key="images.id"
+          class="absolute w-full h-full rounded-lg border border-white"
+          :class="{
+            'w-3/6':
+              objData.attributes.real_estate_ids.length > 1 &&
+              images.id == objData.attributes.real_estate_ids[0],
+            'z-40': images.id == objData.attributes.real_estate_ids[0],
 
-              'wd-48':
-                images.id == objData.attributes.real_estate_ids[1] &&
-                objData.attributes.real_estate_ids.length > 2,
-              'z-20': images.id == objData.attributes.real_estate_ids[1],
-              'brightness-80':
+            'w-3/4':
+              objData.attributes.real_estate_ids.length > 2 &&
+              images.id == objData.attributes.real_estate_ids[1],
+            'z-30': images.id == objData.attributes.real_estate_ids[1],
+
+            'z-20': images.id == objData.attributes.real_estate_ids[2],
+          }"
+        >
+          <div
+            class="filter absolute z-20 rounded-md left-0 top-0 h-full w-full"
+            :class="{
+              'bg-lh': images.id == objData.attributes.real_estate_ids[2],
+              'bg-gray-400': images.id == objData.attributes.real_estate_ids[1],
+              'bg-opacity-25':
                 images.id == objData.attributes.real_estate_ids[1],
-
-              'z-10': images.id == objData.attributes.real_estate_ids[2],
-              'brightness-60':
-                images.id == objData.attributes.real_estate_ids[2],
             }"
-            class="p-0-2 absolute object-cover rounded-lg h-full"
-            v-for="images in searchingImage(
-              objData.attributes.real_estate_ids,
-              included,
-            )"
-            :key="images.id"
+          ></div>
+          <img
+            class="w-full h-full object-cover rounded-md"
             :src="images.attributes.gallery_urls[0]"
             :alt="images.attributes.gallery_urls[0]"
           />
         </div>
         <img
-          class="absolute w-full h-full left-0 top-0 z-0"
+          class="absolute rounded-lg w-full h-full left-0 top-0 z-10"
           src="@/assets/static/images/empty-state.png"
           alt="empty state image"
         />
-        <span class="absolute t-r-2 z-50 text-lg font-semibold text-white">
+        <span
+          class="
+            absolute
+            z-50
+            text-lg
+            font-semibold
+            text-white
+            top-1/2
+            right-10d
+            transform
+            -translate-y-2/4
+          "
+        >
           +{{
             objData.attributes.real_estate_ids.length > 3
               ? objData.attributes.real_estate_ids.length - 3
@@ -66,12 +97,14 @@
         "
       >
         <img
-          class="w-12"
+          class="w-9"
           src="@/assets/static/images/plus.svg"
           alt="plus icon"
         />
       </div>
-      <span class="cursor-pointer block my-5 text-lg text-blue-700 font-medium">
+      <span
+        class="cursor-pointer block my-5 text-lg text-blue-700 font-semibold"
+      >
         Crear una nueva lista
       </span>
     </div>
