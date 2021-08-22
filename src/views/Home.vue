@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="font-semibold text-center text-2xl md:text-3xl mt-8 mb-16">
+    <h1 class="font-semibold text-center text-2xl md:text-3xl mt-16 mb-16">
       Lista de favoritos
     </h1>
     <px-states :states="states" :included="included" />
