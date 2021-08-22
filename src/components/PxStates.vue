@@ -2,6 +2,7 @@
   <section
     class="
       max-w-4xl
+      pb-20
       px-6
       lg:m-auto
       grid
@@ -13,14 +14,23 @@
     "
   >
     <div v-for="objData in states" :key="objData.id">
-      <div class="relative w-full h-48">
+      <div class="relative w-full h-48 overflow-hidden">
         <div
           v-for="images in searchingImage(
             objData.attributes.real_estate_ids,
             included,
           )"
           :key="images.id"
-          class="absolute w-full h-full rounded-lg border border-white"
+          class="
+            absolute
+            w-full
+            h-full
+            rounded-lg
+            border border-white
+            duration-500
+            hover:w-full
+            hover:z-50
+          "
           :class="{
             'w-3/6':
               objData.attributes.real_estate_ids.length > 1 &&
@@ -36,7 +46,16 @@
           }"
         >
           <div
-            class="filter absolute z-20 rounded-md left-0 top-0 h-full w-full"
+            class="
+              filter
+              absolute
+              rounded-md
+              left-0
+              top-0
+              h-full
+              w-full
+              hover:bg-opacity-0 hover:bg-white
+            "
             :class="{
               'bg-lh': images.id == objData.attributes.real_estate_ids[2],
               'bg-gray-400': images.id == objData.attributes.real_estate_ids[1],
@@ -51,7 +70,7 @@
           />
         </div>
         <img
-          class="absolute rounded-lg w-full h-full left-0 top-0 z-10"
+          class="absolute rounded-lg w-full h-full left-0 top-0 z-0"
           src="@/assets/static/images/empty-state.png"
           alt="empty state image"
         />

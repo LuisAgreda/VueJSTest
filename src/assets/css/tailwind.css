@@ -17,3 +17,11 @@
 .w-3\/4 {
   width: 75% !important;
 }
+
+.hover\:w-full:hover {
+  width: 100% !important;
+}
+
+.hover\:z-50:hover {
+  z-index: 50 !important;
+}
