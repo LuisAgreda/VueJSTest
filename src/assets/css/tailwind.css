@@ -25,3 +25,8 @@
 .hover\:z-50:hover {
   z-index: 50 !important;
 }
+
+.wd-full {
+  width: 100% !important;
+  z-index: 50;
+}
