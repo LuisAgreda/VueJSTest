@@ -60,6 +60,7 @@
               hover:bg-opacity-0 hover:bg-white
             "
             :class="{
+              'wd-full': isClick && images.id == idClick,
               'bg-op-0': isClick && images.id == idClick,
               'bg-lh': images.id == objData.attributes.real_estate_ids[2],
               'bg-gray-400': images.id == objData.attributes.real_estate_ids[1],
