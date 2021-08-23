@@ -16,6 +16,7 @@
     <div v-for="objData in states" :key="objData.id">
       <div class="relative w-full h-48 overflow-hidden">
         <div
+          @click="handleClick(images.id)"
           v-for="images in searchingImage(
             objData.attributes.real_estate_ids,
             included,
@@ -32,6 +33,8 @@
             hover:z-50
           "
           :class="{
+            'wd-full': isClick && images.id == idClick,
+
             'w-3/6':
               objData.attributes.real_estate_ids.length > 1 &&
               images.id == objData.attributes.real_estate_ids[0],
@@ -134,6 +137,14 @@
 export default {
   name: 'PxStates',
 
+  data() {
+    return {
+      idClick: [],
+
+      isClick: false,
+    }
+  },
+
   props: {
     states: {
       type: Array,
@@ -146,6 +157,11 @@ export default {
   },
 
   methods: {
+    handleClick(id) {
+      this.idClick = this.included.filter(x => x.id == id).map(x => x.id)
+      this.isClick = !this.isClick
+    },
+
     searchingImage(dataId, includedId) {
       const res = []
       dataId.map(x => res.push(...includedId.filter(y => y.id == x)))
