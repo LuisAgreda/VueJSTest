@@ -61,7 +61,7 @@
         "stratum": 5,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/1"
         ],
         "administration_price": 459000,
         "bathroom": [
@@ -117,7 +117,7 @@
         "stratum": 5,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/2"
         ],
         "administration_price": 300000,
         "bathroom": [
@@ -173,7 +173,7 @@
         "stratum": 4,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/3"
         ],
         "administration_price": null,
         "bathroom": [
@@ -225,7 +225,7 @@
         "stratum": 5,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/4"
         ],
         "administration_price": 478300,
         "bathroom": [
@@ -280,7 +280,7 @@
         "stratum": 6,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/5"
         ],
         "administration_price": 990000,
         "bathroom": [
@@ -332,7 +332,7 @@
         "stratum": 2,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/6"
         ],
         "administration_price": 71500,
         "bathroom": [
@@ -387,7 +387,7 @@
         "stratum": 5,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/7"
         ],
         "administration_price": null,
         "bathroom": [
@@ -439,7 +439,7 @@
         "stratum": 3,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/8"
         ],
         "administration_price": null,
         "bathroom": [
@@ -491,7 +491,7 @@
         "stratum": 4,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/9"
         ],
         "administration_price": 327000,
         "bathroom": [
@@ -543,7 +543,7 @@
         "stratum": 3,
         "matterport": null,
         "gallery_urls": [
-          "http://lorempixel.com/400/200/city/"
+          "http://lorempixel.com/400/200/city/10"
         ],
         "administration_price": null,
         "bathroom": [
